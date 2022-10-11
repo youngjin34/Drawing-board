@@ -8,11 +8,8 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <canvas></canvas>
-  <input type="range" id="line-width" min="1" max="10"
-  value="5" step="0.5">
-  <input type="color" id="color">
-  <div>
+  <div class="color-options">
+    <input type="color" id="color">
     <div class="color-option" style="background-color: #dff9fb;" data-color="#dff9fb"></div>
     <div class="color-option" style="background-color: #e056fd;" data-color="#e056fd"></div>
     <div class="color-option" style="background-color: #30336b;" data-color="#30336b"></div>
@@ -26,9 +23,21 @@
     <div class="color-option" style="background-color: #786fa6;" data-color="#786fa6"></div>
     <div class="color-option" style="background-color: #303952;" data-color="#303952"></div>
   </div>
-  <button id="mode-btn">Fill</button>
-  <button id="destroy-btn">Destroy</button>
-  <button id="eraser-btn">Erase</button>
+  <canvas></canvas>
+  <div class="btn">
+    <span id="Pencil">Pencil Width ⬇️</span>
+    <input type="range" id="line-width" min="1" max="10"
+    value="5" step="0.5">
+    <button id="mode-btn">🆒 Fill</button>
+    <button id="destroy-btn">💣 Destroy</button>
+    <button id="eraser-btn">🗡️ Erase</button>
+    <label for="file">
+      🖼️ Add photo
+      <input type="file" accept="image/*" id="file">
+    </label>
+    <input type="text" placeholder="텍스트를 입력해 주세요:)" id="text">
+    <button id="save">👌 Save image</button>
+  </div>
   <script src="app.js"></script>
 </body>
 </html>
